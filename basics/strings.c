@@ -33,6 +33,7 @@ int main()
 
     char *mixed = add(sentence, sentence2);
     printf("%s\n", mixed);
+    return 0;
 }
 
 char *add(char *word, char *word2)
