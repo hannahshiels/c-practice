@@ -3,6 +3,7 @@
 
 void inputNumbers();
 void inputChar();
+void inputString();
 
 int main(int argc, char *argv[])
 {
@@ -19,8 +20,10 @@ int main(int argc, char *argv[])
 
    // printf("%s %s %s\n", "Hello", argv[1], "enter two numbers to add.");
    // inputNumbers();
-    printf("%s\n", "Enter two chars to compare distance apart.");
-    inputChar();
+   // printf("%s\n", "Enter two chars to compare distance apart.");
+    // inputChars();
+    printf("%s\n", "Enter a string to its count vowels and consonants.");
+    inputString();
     return 0;
 }
 
@@ -36,7 +39,7 @@ void inputNumbers()
     printf("%s: %d\n", "The sum is", total);
 }
 
-void inputChar()
+void inputChars()
 {
     printf("%s: ", "First char");
     char a;
@@ -48,3 +51,14 @@ void inputChar()
     int dist = charDist(a, b);
     printf("\n%s: %d\n", "The distance is", dist);
 }
+
+void inputString(){
+    printf("%s: ", "String");
+    char word[] ="";
+    scanf("%s", word);
+    int vowels = countVowels(word);
+    int cons = countConsonants(word);
+    printf("\n%s: %d. %s: %d\n", "Number of vowels", vowels, "Number of consonants", cons);
+}
+
+
