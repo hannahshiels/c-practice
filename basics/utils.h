@@ -49,9 +49,11 @@ int countConsonants(char word[])
         {
             letter = tolower(letter);
         }
+        if(islower(letter)){
         if (letter != 'a' && letter != 'e' && letter != 'i' && letter != 'o' && letter != 'u' && letter != '\n')
         {
             consonantCount++;
+        }
         }
     }
 

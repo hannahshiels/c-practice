@@ -2,7 +2,7 @@
 #include "utils.h"
 
 void inputNumbers();
-void inputChar();
+void inputChars();
 void inputString();
 
 int main(int argc, char *argv[])
@@ -20,10 +20,10 @@ int main(int argc, char *argv[])
 
    // printf("%s %s %s\n", "Hello", argv[1], "enter two numbers to add.");
    // inputNumbers();
-   // printf("%s\n", "Enter two chars to compare distance apart.");
-    // inputChars();
-    printf("%s\n", "Enter a string to its count vowels and consonants.");
-    inputString();
+    printf("%s\n", "Enter two chars to compare distance apart.");
+    inputChars();
+    //printf("%s\n", "Enter a string to its count vowels and consonants.");
+    //inputString();
     return 0;
 }
 
