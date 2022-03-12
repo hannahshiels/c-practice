@@ -81,7 +81,7 @@ Node *random_list(void)
     head->prev = NULL;                  // init prev pointer
     head->next = NULL;                  // init next pointer
 
-    for (i = 0; i < MAX; i++) // since head is created, 5 more elements will created and added to listed list (wondering if I should change...)
+    for (i = 0; i < MAX; i++) // since head is created, 5 more elements will created and added to listed list
     {
         item = malloc(sizeof(Node)); // allocate memory
         nr = get_random_number();    // get random number
