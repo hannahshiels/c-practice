@@ -71,6 +71,24 @@ void printLinkedList(SinglyLinkedListNode* head) {
     }
 }
 
+int getNode(SinglyLinkedListNode* llist, int positionFromTail) {
+    SinglyLinkedListNode *copy = llist;
+    int len = 0;
+    while(llist != NULL){
+        llist = llist->next;
+        len++;
+    }
+    int pos = len-1 - positionFromTail;
+    int cur = 0;
+    while(cur != pos){
+        copy = copy->next;
+        cur++;
+    }
+    return copy->data;
+}
+
+
+
 SinglyLinkedListNode* insertNodeAtTail(SinglyLinkedListNode* head, int data) {
     SinglyLinkedListNode *copy = head;
     SinglyLinkedListNode *newNode = malloc(sizeof(SinglyLinkedListNode));
