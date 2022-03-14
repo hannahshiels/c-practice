@@ -1,5 +1,7 @@
 #include <stdio.h>
 void print_bits(unsigned long x);
+void isOddOrEven(int num);
+
 
 int main(){
     int x = 423, y = 22;
@@ -7,13 +9,23 @@ int main(){
     x = x << 4; // shift 1 bit right
     printf("Number after shifting right 1 bit: %d\n", x);
     print_bits(y);
+    isOddOrEven(22);
+    isOddOrEven(13);
 }
 
 void print_bits(unsigned long x)
 {
     int i;
-    for(i=sizeof(x)-1; i>=0; i--) {
+    for(i=8*sizeof(x)-1; i>=0; i--) {
         (x & (1 << i)) ? putchar('1') : putchar('0');
     }
     printf("\n");
+}
+
+void isOddOrEven(int num){
+    if (num & 1) {
+   printf("%d: Number is odd\n", num);
+} else {
+    printf("%d: Number is even\n", num);
+}
 }
